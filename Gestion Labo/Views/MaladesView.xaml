@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="Gestion_Labo.Views.MaladesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gestion_Labo.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1280" Background="Gray">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel  Grid.Row="0">
+            <TextBox DockPanel.Dock="Left" Margin="10 0 0 0"  x:Name="search" Width="300"/>
+            <Button x:Name="AddMalade" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderBrush="Transparent"  Style="{StaticResource MaterialDesignFloatingActionButton}">
+                <materialDesign:PackIcon Kind="AddCircle" Height="auto" Width="auto" />
+            </Button>
+        </DockPanel>
+        
+
+        <DataGrid Grid.Row="1" x:Name="BindMalades" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=malade.Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Path=malade.Nom}"></DataGridTextColumn>
+
+                <DataGridTemplateColumn  Header="Gere les Analyse">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button cal:Message.Attach="LoadAnalyse(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
+                                <materialDesign:PackIcon Kind="SquareEditOutline" Foreground="Green" Width="auto" Height="auto"  />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    
+                    
+                    
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn  Header="Supprimer">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button cal:Message.Attach="DeleteMalade(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
+                                <materialDesign:PackIcon Kind="DeleteForever" Foreground="Green" Width="auto" Height="auto"  />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+
+
+
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+            
+            
+            
+        </DataGrid>
+    </Grid>
+</UserControl>

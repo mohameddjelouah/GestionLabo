@@ -1,0 +1,46 @@
+﻿<Window x:Class="Gestion_Labo.Views.AnalyseView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gestion_Labo.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:cal="http://www.caliburnproject.org"
+        mc:Ignorable="d"
+        Title="AnalyseView" Height="600" Width="1000" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox HorizontalAlignment="Center" Grid.Row="0" x:Name="search" Width="300"/>
+
+        <DataGrid Grid.Row="1" x:Name="BindAnalyse" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=Id}"></DataGridTextColumn>
+            
+                
+                <DataGridTextColumn Header="maldeId" Binding="{Binding Path=MaladeID}"></DataGridTextColumn>
+
+
+                <DataGridTextColumn Header="Nom" Binding="{Binding Path=Resultat}"></DataGridTextColumn>
+
+                <DataGridTemplateColumn  Header="Gere les Analyse">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button cal:Message.Attach="DeleteAnalyse(BindAnalyse.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
+                                <materialDesign:PackIcon Kind="SquareEditOutline" Foreground="Green" Width="auto" Height="auto"  />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+
+
+
+        </DataGrid>
+    </Grid>
+</Window>

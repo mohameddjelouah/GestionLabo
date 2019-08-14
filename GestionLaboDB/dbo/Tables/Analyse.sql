@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Analyse]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [MaladeID] INT NOT NULL, 
+    [Resultat] NVARCHAR(MAX) NOT NULL, 
+    CONSTRAINT [FK_Analyse_ToMalades] FOREIGN KEY (MaladeID) REFERENCES Malades(Id) On DELETE CASCADE
+)

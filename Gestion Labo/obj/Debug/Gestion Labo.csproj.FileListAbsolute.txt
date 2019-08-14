@@ -1,0 +1,40 @@
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Gestion Labo.exe.config
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Gestion Labo.exe
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Gestion Labo.pdb
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\MaterialDesignColors.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\System.Windows.Interactivity.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.xml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.xml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\MaterialDesignColors.pdb
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\App.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo_MarkupCompile.cache
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion_Labo.Properties.Resources.resources
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.csproj.GenerateResource.cache
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CoreCompileInputs.cache
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CopyComplete
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.exe
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.pdb
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo_MarkupCompile.lref
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\App.baml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.g.resources
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\ShellView.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\ShellView.baml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Gestion Labo.csprojAssemblyReference.cache
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Gestion Labo.lib.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Dapper.dll
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Gestion Labo.lib.pdb
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\bin\Debug\Dapper.xml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\MaladesView.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\MaladesView.baml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\AnalyseView.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\AnalyseView.baml
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\AddMaladeView.g.cs
+D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo\obj\Debug\Views\AddMaladeView.baml

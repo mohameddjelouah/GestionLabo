@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="Gestion_Labo.Views.AddMaladeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gestion_Labo.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1280" Background="Silver" FontSize="18">
+    <Grid>
+
+        <Grid.RowDefinitions>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="auto"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+            <TextBlock  Text="Malade Info" ></TextBlock>
+        
+           <materialDesign:PackIcon Padding="5" Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+        <TextBox x:Name="Nom" Padding="5" Margin="0 20 0 20"  MinWidth="150"  Grid.Row="1" Grid.Column="2"   materialDesign:HintAssist.Hint="Nom"/>
+
+            <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+            <TextBox x:Name="Prenom"  Margin="0 20 0 20"  MinWidth="150"  Grid.Row="2" Grid.Column="2"  materialDesign:HintAssist.Hint="Prenom"/>
+
+        <DatePicker x:Name="Birthday" Margin="0 20 0 20" Grid.Row="3" Grid.Column="2" materialDesign:HintAssist.Hint="Date de nessance" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+
+        <Separator Background="Black" Grid.Column="3" Grid.Row="0" Grid.RowSpan="6" Margin="0 15 0 15" Style="{StaticResource MaterialDesignLightSeparator}" >
+            <Separator.LayoutTransform>
+                <RotateTransform Angle="90" />
+            </Separator.LayoutTransform>
+        </Separator>
+
+        <TextBlock Grid.Column="4" Text="Analyse Info" ></TextBlock>
+
+        <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="5" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+        <TextBox x:Name="Resultat" Padding="5"  Margin="0 20 0 20"  MinWidth="150"  Grid.Row="1" Grid.Column="6"   materialDesign:HintAssist.Hint="Resultat"/>
+        <Button x:Name="AddToAnalyse" Margin="10" Grid.Row="2" Grid.Column="6" Content="Ajouter a la list"/>
+        
+        
+        <ListBox x:Name="Analyses" BorderThickness="1" BorderBrush="Black" MinWidth="200" Grid.Row="1" Grid.RowSpan="3" Grid.Column="7">
+            <ListBoxItem>
+                <TextBlock Text="lolo"></TextBlock>
+            </ListBoxItem>
+        </ListBox>
+
+        <Button x:Name="RemoveAnalyse" Grid.Row="4" Content="Ajouter Malades"  Grid.Column="7" Margin="10 20 10 0"/>
+       
+        <Button x:Name="AddMalade" Grid.Row="5" Content="Ajouter Malades"  Grid.Column="8" Margin="10 20 10 0"/>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0335198b-9700-4c2c-87e5-d603eecf1cc3" ChangeDateTime="08/06/2019 08:29:18">
+    <Property Name="ElementName" Value="[dbo].[Malades].[dcf]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Malades]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Nom" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="86e4e83c-929b-435d-a1ac-9b184a85f299" ChangeDateTime="08/06/2019 08:31:11">
+    <Property Name="ElementName" Value="[dbo].[Malades].[Resultat]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Malades]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AnalyseID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b9172ff0-d663-4f09-a18b-30a90662ad86" ChangeDateTime="08/06/2019 08:46:43">
+    <Property Name="ElementName" Value="[dbo].[FK_Analyse_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Analyse]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Analyse_ToMalades]" />
+  </Operation>
+</Operations>
