@@ -36,7 +36,7 @@ namespace Gestion_Labo.ViewModels
             MaladeModel mm = new MaladeModel { Nom = "haloma", Prenom = "baloma" ,Birthday = DateTime.Now };
 
             List<AnalyseModel> am = new List<AnalyseModel>();
-            Console.Write("");
+           
             am.Add(new AnalyseModel { Resultat = "lolowa" });          
             am.Add(new AnalyseModel { Resultat = "chinga" });          
             am.Add(new AnalyseModel { Resultat = "binga" });

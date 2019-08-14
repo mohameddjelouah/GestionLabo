@@ -7,3 +7,12 @@ D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo.lib\obj\Debug\Gestion
 D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.dll
 D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.pdb
 D:\Users\m.djelouah\source\repos\Gestion Labo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csprojAssemblyReference.cache
+F:\myapp\GestionLabo\Gestion Labo.lib\bin\Debug\Gestion Labo.lib.dll
+F:\myapp\GestionLabo\Gestion Labo.lib\bin\Debug\Gestion Labo.lib.pdb
+F:\myapp\GestionLabo\Gestion Labo.lib\bin\Debug\Dapper.dll
+F:\myapp\GestionLabo\Gestion Labo.lib\bin\Debug\Dapper.xml
+F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csprojAssemblyReference.cache
+F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CoreCompileInputs.cache
+F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CopyComplete
+F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.dll
+F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.pdb

@@ -1,6 +1,8 @@
 ﻿using Caliburn.Micro;
+using Gestion_Labo.lib.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +19,7 @@ namespace Gestion_Labo.ViewModels
             set {
                 _nom = value;
                 NotifyOfPropertyChange(() => Nom);
-
+                NotifyOfPropertyChange(() => CanAddMalade);
 
             }
         }
@@ -30,21 +32,21 @@ namespace Gestion_Labo.ViewModels
             {
                 _prenom = value;
                 NotifyOfPropertyChange(() => Prenom);
-
+                NotifyOfPropertyChange(() => CanAddMalade);
 
             }
         }
+       
 
-
-        private DateTime _birthday;
-        public DateTime Birthday
+        private DateTime? _birthday = null ;
+        public DateTime? Birthday
         {
             get { return _birthday; }
             set
             {
                 _birthday = value;
                 NotifyOfPropertyChange(() => Birthday);
-
+                NotifyOfPropertyChange(() => CanAddMalade);
 
             }
         }
@@ -63,7 +65,18 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
-        
+        private BindingList<AnalyseModel> _analyses = new BindingList<AnalyseModel>();
+        public BindingList<AnalyseModel> Analyses
+        {
+            get { return _analyses; }
+            set {
+
+                _analyses = value;
+                NotifyOfPropertyChange(() => Analyses);
+
+            }
+        }
+
 
         public bool CanAddToAnalyse
         {
@@ -85,7 +98,28 @@ namespace Gestion_Labo.ViewModels
         public void AddToAnalyse()
         {
 
+            AnalyseModel am = new AnalyseModel { Resultat = Resultat };
+
+            Analyses.Add(am);
+
+            Resultat = null;
+
         }
+
+        private AnalyseModel _selectedAnalyse;
+
+        public AnalyseModel SelectedAnalyse
+        {
+            get { return _selectedAnalyse; }
+
+            set {
+                _selectedAnalyse = value;
+                NotifyOfPropertyChange(() => SelectedAnalyse);
+                NotifyOfPropertyChange(() => CanRemoveAnalyse);
+
+            }
+        }
+
 
         public bool CanRemoveAnalyse
         {
@@ -94,6 +128,10 @@ namespace Gestion_Labo.ViewModels
 
                 bool output = false;
 
+                if (SelectedAnalyse != null)
+                {
+                    output = true;
+                }
                
                 return output;
 
@@ -104,12 +142,29 @@ namespace Gestion_Labo.ViewModels
 
         public void RemoveAnalyse()
         {
-
+            Analyses.Remove(SelectedAnalyse);
 
         }
 
+        public bool CanAddMalade
+        {
+            get
+            {
+
+                bool output = false;
+
+                if (Nom?.Length>0 && Prenom?.Length>0 && Birthday != null)
+                {
+                    output = true;
+                }
+
+                return output;
 
 
+            }
+
+        }
+        
         public void AddMalade()
         {
 

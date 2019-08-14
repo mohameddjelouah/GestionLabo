@@ -7,3 +7,12 @@ D:\Users\m.djelouah\source\repos\Gestion Labo\GestionLaboDB\obj\Debug\Model.xml
 D:\Users\m.djelouah\source\repos\Gestion Labo\GestionLaboDB\obj\Debug\refactor.xml
 D:\Users\m.djelouah\source\repos\Gestion Labo\GestionLaboDB\obj\Debug\postdeploy.sql
 D:\Users\m.djelouah\source\repos\Gestion Labo\GestionLaboDB\obj\Debug\predeploy.sql
+F:\myapp\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.dacpac
+F:\myapp\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.dll
+F:\myapp\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.pdb
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\Model.xml
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\refactor.xml
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\postdeploy.sql
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\predeploy.sql
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.dll
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb

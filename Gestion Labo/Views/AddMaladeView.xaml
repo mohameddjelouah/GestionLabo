@@ -34,12 +34,13 @@
         </Grid.ColumnDefinitions>
 
             <TextBlock  Text="Malade Info" ></TextBlock>
-        
-           <materialDesign:PackIcon Padding="5" Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+
+        <materialDesign:PackIcon Padding="5" Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=Nom, Path=BorderBrush}" />
         <TextBox x:Name="Nom" Padding="5" Margin="0 20 0 20"  MinWidth="150"  Grid.Row="1" Grid.Column="2"   materialDesign:HintAssist.Hint="Nom"/>
 
-            <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+        <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Kind="Account" Foreground="{Binding ElementName=Prenom, Path=BorderBrush}" />
             <TextBox x:Name="Prenom"  Margin="0 20 0 20"  MinWidth="150"  Grid.Row="2" Grid.Column="2"  materialDesign:HintAssist.Hint="Prenom"/>
+
 
         <DatePicker x:Name="Birthday" Margin="0 20 0 20" Grid.Row="3" Grid.Column="2" materialDesign:HintAssist.Hint="Date de nessance" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
 
@@ -52,18 +53,22 @@
 
         <TextBlock Grid.Column="4" Text="Analyse Info" ></TextBlock>
 
-        <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="5" Kind="Account" Foreground="{Binding ElementName=NameTextBox, Path=BorderBrush}" />
+        <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" Grid.Row="1" Grid.Column="5" Kind="Account" Foreground="{Binding ElementName=Resultat, Path=BorderBrush}" />
         <TextBox x:Name="Resultat" Padding="5"  Margin="0 20 0 20"  MinWidth="150"  Grid.Row="1" Grid.Column="6"   materialDesign:HintAssist.Hint="Resultat"/>
+        
+        
         <Button x:Name="AddToAnalyse" Margin="10" Grid.Row="2" Grid.Column="6" Content="Ajouter a la list"/>
         
         
-        <ListBox x:Name="Analyses" BorderThickness="1" BorderBrush="Black" MinWidth="200" Grid.Row="1" Grid.RowSpan="3" Grid.Column="7">
-            <ListBoxItem>
-                <TextBlock Text="lolo"></TextBlock>
-            </ListBoxItem>
+        <ListBox x:Name="Analyses" BorderThickness="1" SelectedItem="{Binding SelectedAnalyse}" BorderBrush="Black" MinWidth="200" Grid.Row="1" Grid.RowSpan="3" Grid.Column="7">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Resultat}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button x:Name="RemoveAnalyse" Grid.Row="4" Content="Ajouter Malades"  Grid.Column="7" Margin="10 20 10 0"/>
+        <Button x:Name="RemoveAnalyse" Grid.Row="4" Content="supprimer analyse"  Grid.Column="7" Margin="10 20 10 0"/>
        
         <Button x:Name="AddMalade" Grid.Row="5" Content="Ajouter Malades"  Grid.Column="8" Margin="10 20 10 0"/>
 
