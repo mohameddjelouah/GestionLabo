@@ -84,6 +84,8 @@ namespace Gestion_Labo.ViewModels
             //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
             //var result = _window.ShowDialog(u, null, null);
             _window.ShowDialog(Dialog, null, null);
+
+            //verify if something is change before loadmalades again
             await LoadMalades();
             //if (result.HasValue && result.Value)
             //{

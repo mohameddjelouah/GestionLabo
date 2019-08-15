@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="GestionLaboDB.dll" />
-			<Metadata Name="FileName" Value="F:\MYAPP\GESTIONLABO\GESTIONLABODB\OBJ\DEBUG\GESTIONLABODB.DLL" />
+			<Metadata Name="FileName" Value="D:\MYDEV WITH GIT\GESTIONLABO\GESTIONLABODB\OBJ\DEBUG\GESTIONLABODB.DLL" />
 			<Metadata Name="AssemblyName" Value="GestionLaboDB" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\MyDev with Git\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>

@@ -6,16 +6,20 @@
         xmlns:local="clr-namespace:Gestion_Labo.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:cal="http://www.caliburnproject.org"
-        mc:Ignorable="d"
+        mc:Ignorable="d" Background="LightGray"
         Title="AnalyseView" Height="600" Width="1000" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <DockPanel  Grid.Row="0">
+            <TextBox HorizontalAlignment="Center"  x:Name="search" Width="300"/>
+        <Button x:Name="AddAnalyse" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderBrush="Transparent"  Style="{StaticResource MaterialDesignFloatingActionButton}">
+            <materialDesign:PackIcon Kind="AddCircle" Height="auto" Width="auto" />
+        </Button>
 
-        <TextBox HorizontalAlignment="Center" Grid.Row="0" x:Name="search" Width="300"/>
-
+        </DockPanel>
         <DataGrid Grid.Row="1" x:Name="BindAnalyse" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
 
             <DataGrid.Columns>

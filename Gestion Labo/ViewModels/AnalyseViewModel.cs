@@ -12,9 +12,11 @@ namespace Gestion_Labo.ViewModels
     public class AnalyseViewModel : Screen
     {
         private IMaladesData _maladesData;
-        public AnalyseViewModel(IMaladesData maladesdata)
+        private IWindowManager _window;
+        public AnalyseViewModel(IMaladesData maladesdata, IWindowManager window)
         {
             _maladesData = maladesdata;
+            _window = window;
         }
 
         private MaladesAnalyseModel _analyse;
@@ -67,7 +69,20 @@ namespace Gestion_Labo.ViewModels
             
         }
 
+        public void AddAnalyse()
+        {
+            var Dialog = IoC.Get<AddAnalyseViewModel>();
+            
+            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
+            //var result = _window.ShowDialog(u, null, null);
+            _window.ShowDialog(Dialog, null, null);
+            
+            //if (result.HasValue && result.Value)
+            //{
 
+
+            //}
+        }
 
 
 

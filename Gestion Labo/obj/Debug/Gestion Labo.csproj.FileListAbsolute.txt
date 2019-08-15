@@ -78,3 +78,45 @@ F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CoreCompileInput
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CopyComplete
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.exe
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Gestion Labo.exe.config
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Gestion Labo.exe
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Gestion Labo.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Gestion Labo.lib.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\MaterialDesignColors.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\System.Windows.Interactivity.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Dapper.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Gestion Labo.lib.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\MaterialDesignColors.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\Dapper.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csprojAssemblyReference.cache
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddMaladeView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AnalyseView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\MaladesView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ShellView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\App.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo_MarkupCompile.cache
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo_MarkupCompile.lref
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\App.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddMaladeView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AnalyseView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\MaladesView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ShellView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.g.resources
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion_Labo.Properties.Resources.resources
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.GenerateResource.cache
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CoreCompileInputs.cache
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CopyComplete
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.exe
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml

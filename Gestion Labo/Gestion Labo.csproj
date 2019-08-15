@@ -79,10 +79,14 @@
     </Compile>
     <Compile Include="EventModels\AddMaladeEvent.cs" />
     <Compile Include="Helpers\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ViewModels\AddAnalyseViewModel.cs" />
     <Compile Include="ViewModels\AddMaladeViewModel.cs" />
     <Compile Include="ViewModels\AnalyseViewModel.cs" />
     <Compile Include="ViewModels\MaladesViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Views\AddAnalyseView.xaml.cs">
+      <DependentUpon>AddAnalyseView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddMaladeView.xaml.cs">
       <DependentUpon>AddMaladeView.xaml</DependentUpon>
     </Compile>
@@ -125,6 +129,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\AddAnalyseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AddMaladeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Gestion_Labo.lib.DataAccess.Interfaces;
 using Gestion_Labo.lib.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,15 @@ namespace Gestion_Labo.ViewModels
 {
     public class AddMaladeViewModel : Screen
     {
+
+
+
+        private IMaladesData _maladesData;
+        public AddMaladeViewModel(IMaladesData maladesdata)
+        {
+            _maladesData = maladesdata;
+        }
+
 
         private string _nom;
         public string Nom
@@ -165,8 +175,27 @@ namespace Gestion_Labo.ViewModels
 
         }
         
-        public void AddMalade()
+        public async Task AddMalade()
         {
+            MaladesAnalyseModel am = new MaladesAnalyseModel
+            {
+                malade = new MaladeModel { Nom = Nom, Prenom = Prenom, Birthday = (DateTime)Birthday },
+                analyse = Analyses.ToList()
+            };
+
+            await _maladesData.AddMaladeWithAnalyse(am);
+            ClearInputs();
+        }
+
+        public void ClearInputs()
+        {
+            Nom = null;
+            Prenom = null;
+            Resultat = null;
+            Birthday = null;
+            Analyses = new BindingList<AnalyseModel>();
+
+
 
         }
 

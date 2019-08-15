@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\myapp\GestionLabo\Gestion Labo\obj\Debug\
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\
 Gestion_Labo
 none
 false
 DEBUG;TRACE
-F:\myapp\GestionLabo\Gestion Labo\App.xaml
-41619160010
+D:\MyDev with Git\GestionLabo\Gestion Labo\App.xaml
+5-942425985
 
-15-1031075540
-124-1566415020
-Views\AddMaladeView.xaml;Views\AnalyseView.xaml;Views\MaladesView.xaml;Views\ShellView.xaml;
+17-2063087020
+124947103886
+Views\AddAnalyseView.xaml;Views\AddMaladeView.xaml;Views\AnalyseView.xaml;Views\MaladesView.xaml;Views\ShellView.xaml;
 
 False
 
