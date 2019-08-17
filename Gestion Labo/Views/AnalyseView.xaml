@@ -35,7 +35,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="DeleteAnalyse(BindAnalyse.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
-                                <materialDesign:PackIcon Kind="SquareEditOutline" Foreground="Green" Width="auto" Height="auto"  />
+                                <materialDesign:PackIcon Kind="DeleteForever" Foreground="OrangeRed" Width="auto" Height="auto"  />
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
