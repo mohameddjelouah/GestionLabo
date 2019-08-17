@@ -120,3 +120,5 @@ D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.exe
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.pdb
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml

@@ -72,7 +72,7 @@ namespace Gestion_Labo.ViewModels
         public void AddAnalyse()
         {
             var Dialog = IoC.Get<AddAnalyseViewModel>();
-            
+            Dialog.MaladeId = Analyse.malade.Id;
             //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
             //var result = _window.ShowDialog(u, null, null);
             _window.ShowDialog(Dialog, null, null);
