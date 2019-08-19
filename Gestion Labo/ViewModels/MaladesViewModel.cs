@@ -98,14 +98,42 @@ namespace Gestion_Labo.ViewModels
         public async Task DeleteMalade(MaladesAnalyseModel MAM)
         {
 
-            //Console.WriteLine(MAM.malade.Nom);
+            var Dialog = IoC.Get<ConfirmDialogViewModel>();
+            var result = _window.ShowDialog(Dialog, null, null);
 
 
-            await _maladesData.DeleteMaladeWithAnalyse(MAM.malade.Id);
-            //dialog for conferming the delete
-            ListofMalades.Remove(MAM);
-            BindMalades.Remove(MAM);
+            if (result.HasValue && result.Value)
+            {
+                await _maladesData.DeleteMaladeWithAnalyse(MAM.malade.Id);
+                ListofMalades.Remove(MAM);
+                BindMalades.Remove(MAM);
+            }
 
+
+           
+
+        }
+
+
+        public async Task EditMalade(MaladesAnalyseModel MAM)
+        {
+            var Dialog = IoC.Get<EditMaladeViewModel>();
+            Dialog.Malade = MAM;
+            Dialog.Nom = MAM.malade.Nom;
+            Dialog.Prenom = MAM.malade.Prenom;
+            Dialog.Birthday = MAM.malade.Birthday;
+
+            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
+            //var result = _window.ShowDialog(u, null, null);
+            _window.ShowDialog(Dialog, null, null);
+
+            //verify if something is change before loadmalades again
+            await LoadMalades();
+            //if (result.HasValue && result.Value)
+            //{
+
+
+            //}
         }
 
         public void AddMalade()

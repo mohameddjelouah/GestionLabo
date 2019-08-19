@@ -76,6 +76,8 @@
     <Build Include="dbo\Stored Procedures\spAddAnalyse.sql" />
     <Build Include="dbo\Stored Procedures\spGetMalade.sql" />
     <Build Include="dbo\Stored Procedures\spGetAnalyse.sql" />
+    <Build Include="dbo\Stored Procedures\spEditMalade.sql" />
+    <Build Include="dbo\Stored Procedures\spEditAnalyse.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="GestionLaboDB.refactorlog" />

@@ -34,13 +34,22 @@
                 <DataGridTemplateColumn  Header="Gere les Analyse">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
+                            <Button cal:Message.Attach="EditAnalyse(BindAnalyse.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
+                                <materialDesign:PackIcon Kind="TableEdit" Foreground="Gray" Width="auto" Height="auto"  />
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn  Header="Gere les Analyse">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
                             <Button cal:Message.Attach="DeleteAnalyse(BindAnalyse.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
                                 <materialDesign:PackIcon Kind="DeleteForever" Foreground="OrangeRed" Width="auto" Height="auto"  />
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-
             </DataGrid.Columns>
 
 

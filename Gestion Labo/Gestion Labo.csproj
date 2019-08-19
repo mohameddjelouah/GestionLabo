@@ -82,8 +82,13 @@
     <Compile Include="ViewModels\AddAnalyseViewModel.cs" />
     <Compile Include="ViewModels\AddMaladeViewModel.cs" />
     <Compile Include="ViewModels\AnalyseViewModel.cs" />
+    <Compile Include="ViewModels\ConfirmDialogViewModel.cs" />
+    <Compile Include="ViewModels\EditAnalyseViewModel.cs" />
+    <Compile Include="ViewModels\EditMaladeViewModel.cs" />
+    <Compile Include="ViewModels\ErrorDialogViewModel.cs" />
     <Compile Include="ViewModels\MaladesViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\SuccessDialogViewModel.cs" />
     <Compile Include="Views\AddAnalyseView.xaml.cs">
       <DependentUpon>AddAnalyseView.xaml</DependentUpon>
     </Compile>
@@ -93,11 +98,26 @@
     <Compile Include="Views\AnalyseView.xaml.cs">
       <DependentUpon>AnalyseView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConfirmDialogView.xaml.cs">
+      <DependentUpon>ConfirmDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAnalyseView.xaml.cs">
+      <DependentUpon>EditAnalyseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditMaladeView.xaml.cs">
+      <DependentUpon>EditMaladeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorDialogView.xaml.cs">
+      <DependentUpon>ErrorDialogView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MaladesView.xaml.cs">
       <DependentUpon>MaladesView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuccessDialogView.xaml.cs">
+      <DependentUpon>SuccessDialogView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -141,11 +161,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\ConfirmDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditAnalyseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditMaladeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ErrorDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MaladesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SuccessDialogView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

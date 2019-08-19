@@ -62,11 +62,39 @@ namespace Gestion_Labo.ViewModels
         public async Task DeleteAnalyse(AnalyseModel am)
         {
 
-            await _maladesData.DeleteAnalyse(am.Id,am.MaladeID);
 
-            Analyse.analyse.Remove(am);
-            BindAnalyse.Remove(am);
-            
+            var Dialog = IoC.Get<ConfirmDialogViewModel>();
+            var result = _window.ShowDialog(Dialog, null, null);
+
+
+            if (result.HasValue && result.Value)
+            {
+                await _maladesData.DeleteAnalyse(am.Id, am.MaladeID);
+
+                Analyse.analyse.Remove(am);
+                BindAnalyse.Remove(am);
+            }
+        }
+
+
+        public void EditAnalyse(AnalyseModel am)
+        {
+            // its working
+            var Dialog = IoC.Get<EditAnalyseViewModel>();
+            Dialog.Am = am;
+            Dialog.Resultat = am.Resultat;
+            //Dialog.MaladeId = Analyse.malade.Id;
+            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
+            //var result = _window.ShowDialog(u, null, null);
+            _window.ShowDialog(Dialog, null, null);
+
+            Replace(Analyse.analyse, am, Dialog.Am);
+
+            BindAnalyse.Refresh();
+
+           //load the analyse again
+           //or make am = dialog.Am
+
         }
 
         public void AddAnalyse()
@@ -84,6 +112,17 @@ namespace Gestion_Labo.ViewModels
             //}
         }
 
+
+        public void Replace<AnalyseModel>(List<AnalyseModel> source, AnalyseModel oldValue, AnalyseModel newValue)
+        {
+            if (source == null)
+                throw new ArgumentNullException("source");
+
+            var index = source.IndexOf(oldValue);
+            if (index != -1)
+                source[index] = newValue;
+
+        }
 
 
 

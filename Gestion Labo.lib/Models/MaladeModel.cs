@@ -11,7 +11,7 @@ namespace Gestion_Labo.lib.Models
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
 
         
 

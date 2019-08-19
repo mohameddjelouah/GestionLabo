@@ -16,5 +16,8 @@ namespace Gestion_Labo.lib.DataAccess.Interfaces
         Task AddAnalyse(List<AnalyseModel> am);
 
         Task<MaladesAnalyseModel> GetMaladeById(int id);
+
+        Task EditMalade(MaladeModel mm);
+        Task EditAnalyse(AnalyseModel am);
     }
 }

@@ -96,5 +96,18 @@ namespace Gestion_Labo.lib.DataAccess
             SqlDataAccess sql = new SqlDataAccess();
             await sql.SaveData("dbo.spAddAnalyse", am, "GestionLaboDB");
         }
+
+
+        public async Task EditMalade(MaladeModel mm)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            await sql.UpdateData("dbo.spEditMalade", mm, "GestionLaboDB");
+        }
+
+        public async Task EditAnalyse(AnalyseModel am)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            await sql.UpdateData("dbo.spEditAnalyse", am, "GestionLaboDB");
+        }
     }
 }

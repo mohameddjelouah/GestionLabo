@@ -122,3 +122,13 @@ D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\EditAnalyseView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\EditMaladeView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\EditAnalyseView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\EditMaladeView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ConfirmDialogView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ErrorDialogView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\SuccessDialogView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ConfirmDialogView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\ErrorDialogView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\SuccessDialogView.baml

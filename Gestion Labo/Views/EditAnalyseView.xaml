@@ -1,4 +1,4 @@
-﻿<Window x:Class="Gestion_Labo.Views.AddAnalyseView"
+﻿<Window x:Class="Gestion_Labo.Views.EditAnalyseView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:Gestion_Labo.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:cal="http://www.caliburnproject.org"
-        mc:Ignorable="d" Background="LightGray"
-        Title="AddAnalyseView" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+        mc:Ignorable="d"
+        Title="EditAnalyseView" Height="450" Width="800" WindowStartupLocation="CenterOwner">
     <Grid>
+
 
         <materialDesign:PackIcon Margin="20 20 0 20" VerticalAlignment="Center" HorizontalAlignment="Left"  Kind="Account" Foreground="{Binding ElementName=Resultat, Path=BorderBrush}" />
         <TextBox x:Name="Resultat" Padding="5" Margin="0 20 0 20"  MinWidth="150"  HorizontalAlignment="Center" VerticalAlignment="Center"   materialDesign:HintAssist.Hint="Resultat"/>
 
-        <Button x:Name="AddAnalyse" Margin="10" HorizontalAlignment="Right" Content="Modifier analyse"/>
-
+        <Button x:Name="EditAnalyse" Margin="10" HorizontalAlignment="Right" Content="Ajouter a la list"/>
+        
+        
     </Grid>
 </Window>
