@@ -19,9 +19,7 @@
         
         <StackPanel Orientation="Horizontal">
             <Button x:Name="Malade" Content="afficher malade" Width="auto" Height="50"></Button>
-            <Button x:Name="AddMalade" Content="add malades" Width="auto" Height="50"></Button>
-            <Button x:Name="DeleteMalade" Content="dalate malades" Width="auto" Height="50"></Button>
-            <Button x:Name="updateMalade" Content="update malades" Width="auto" Height="50"></Button>
+           
         </StackPanel>
 
 

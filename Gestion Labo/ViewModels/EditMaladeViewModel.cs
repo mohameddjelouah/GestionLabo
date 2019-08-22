@@ -79,6 +79,21 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
+        private bool _isEdit = false;
+
+        public bool isEdit
+        {
+            get { return _isEdit; }
+            set
+            {
+                _isEdit = value;
+                NotifyOfPropertyChange(() => isEdit);
+
+
+            }
+        }
+
+
         public bool CanEditMalade {
 
             get
@@ -113,6 +128,7 @@ namespace Gestion_Labo.ViewModels
                 Malade.malade.Birthday = Birthday;
 
                 await _maladesData.EditMalade(Malade.malade);
+                isEdit = true;
             }
 
         }

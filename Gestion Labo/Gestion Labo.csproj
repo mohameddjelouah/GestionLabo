@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="EventModels\AddMaladeEvent.cs" />
     <Compile Include="Helpers\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Helpers\Replace.cs" />
     <Compile Include="ViewModels\AddAnalyseViewModel.cs" />
     <Compile Include="ViewModels\AddMaladeViewModel.cs" />
     <Compile Include="ViewModels\AnalyseViewModel.cs" />

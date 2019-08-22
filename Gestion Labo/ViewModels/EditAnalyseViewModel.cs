@@ -32,6 +32,19 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
+        private bool _isEdit = false;
+
+        public bool isEdit
+        {
+            get { return _isEdit; }
+            set {
+                _isEdit = value;
+                NotifyOfPropertyChange(() => isEdit);
+
+
+            }
+        }
+
 
         private string _resultat;
 
@@ -80,8 +93,8 @@ namespace Gestion_Labo.ViewModels
             if (result.HasValue && result.Value)
             {
                 Am.Resultat = Resultat;
-
                 _maladesData.EditAnalyse(Am);
+                isEdit = true;
             }
         }
 

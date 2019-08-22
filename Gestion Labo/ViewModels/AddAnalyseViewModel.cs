@@ -14,6 +14,20 @@ namespace Gestion_Labo.ViewModels
     public class AddAnalyseViewModel : Screen
     {
         
+
+        private List<AnalyseModel> _am = new List<AnalyseModel>();
+
+        public List<AnalyseModel> am
+        {
+            get { return _am; }
+            set {
+                _am = value;
+                NotifyOfPropertyChange(() => am);
+
+
+            }
+        }
+
         private IMaladesData _maladesData;
         public AddAnalyseViewModel(IMaladesData maladesdata)
         {
@@ -47,6 +61,20 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
+        private bool _isAdd = false;
+
+        public bool isAdd
+        {
+            get { return _isAdd; }
+            set {
+
+                _isAdd = value;
+                NotifyOfPropertyChange(() => isAdd);
+
+
+            }
+        }
+
         public bool CanAddAnalyse
         {
             get
@@ -67,12 +95,13 @@ namespace Gestion_Labo.ViewModels
 
         public async Task AddAnalyse()
         {
-            List<AnalyseModel> am = new List<AnalyseModel>
-            {
-               new AnalyseModel { MaladeID = MaladeId, Resultat = Resultat }
-            };
 
-            await _maladesData.AddAnalyse(am);
+            AnalyseModel var = new AnalyseModel { MaladeID = MaladeId, Resultat = Resultat };
+            int id = await _maladesData.AddAnalyseGetId(var);
+            var.Id = id;
+            am.Add(var);
+            isAdd = true;
+
         }
 
 

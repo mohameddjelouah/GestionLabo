@@ -16,9 +16,3 @@ F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\postdeploy.sql
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\predeploy.sql
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.dll
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb
-D:\MyDev with Git\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.dacpac
-D:\MyDev with Git\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.dll
-D:\MyDev with Git\GestionLabo\GestionLaboDB\bin\Debug\GestionLaboDB.pdb
-D:\MyDev with Git\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.dll
-D:\MyDev with Git\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb
-D:\MyDev with Git\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.sqlprojAssemblyReference.cache

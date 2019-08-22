@@ -29,39 +29,7 @@ namespace Gestion_Labo.ViewModels
             ActivateItem(IoC.Get<MaladesViewModel>());
         }
 
-        public async void AddMalade()
-        {
-           
-
-            MaladeModel mm = new MaladeModel { Nom = "haloma", Prenom = "baloma" ,Birthday = DateTime.Now };
-
-            List<AnalyseModel> am = new List<AnalyseModel>();
-           
-            am.Add(new AnalyseModel { Resultat = "lolowa" });          
-            am.Add(new AnalyseModel { Resultat = "chinga" });          
-            am.Add(new AnalyseModel { Resultat = "binga" });
-
-            MaladesAnalyseModel mam = new MaladesAnalyseModel { malade = mm, analyse = am };
-            
-                await _maladesData.AddMaladeWithAnalyse(mam);
-            
-            
-
-
-        }
-
-        public async void DeleteMalade()
-        {
-            await _maladesData.DeleteAnalyse(3,5);
-
-            var output = await _maladesData.GetAllMalades();
-        }
-
-        public async void updateMalade()
-        {
-
-        }
-
+        
         public void Handle(AddMaladeEvent message)
         {
             ActivateItem(IoC.Get<AddMaladeViewModel>());

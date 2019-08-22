@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using Gestion_Labo.Helpers;
 using Gestion_Labo.lib.DataAccess.Interfaces;
 using Gestion_Labo.lib.Models;
 using System;
@@ -48,8 +49,20 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
+        private bool _isChange = false;
+
+        public bool isChange
+        {
+            get { return _isChange = false; }
+            set { _isChange = value; }
+        }
+
+
         protected override void OnViewLoaded(object view)
-        { // if loading incuident doesnt work we caatch an exception that stop progress bar and display a message with failure
+        { 
+            
+            
+            // if loading incuident doesnt work we caatch an exception that stop progress bar and display a message with failure
             base.OnViewLoaded(view);
             BindAnalyse = new BindableCollection<AnalyseModel>(Analyse.analyse);
 
@@ -73,6 +86,7 @@ namespace Gestion_Labo.ViewModels
 
                 Analyse.analyse.Remove(am);
                 BindAnalyse.Remove(am);
+                isChange = true;
             }
         }
 
@@ -82,48 +96,36 @@ namespace Gestion_Labo.ViewModels
             // its working
             var Dialog = IoC.Get<EditAnalyseViewModel>();
             Dialog.Am = am;
-            Dialog.Resultat = am.Resultat;
-            //Dialog.MaladeId = Analyse.malade.Id;
-            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
-            //var result = _window.ShowDialog(u, null, null);
+            Dialog.Resultat = am.Resultat; 
             _window.ShowDialog(Dialog, null, null);
-
-            Replace(Analyse.analyse, am, Dialog.Am);
-
-            BindAnalyse.Refresh();
-
-           //load the analyse again
-           //or make am = dialog.Am
-
+            if (Dialog.isEdit)
+             {
+                Replace.ReplaceItem(Analyse.analyse, am, Dialog.Am);
+                BindAnalyse.Refresh();
+                isChange = true;
+            }
+            
         }
 
         public void AddAnalyse()
         {
             var Dialog = IoC.Get<AddAnalyseViewModel>();
             Dialog.MaladeId = Analyse.malade.Id;
-            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
-            //var result = _window.ShowDialog(u, null, null);
             _window.ShowDialog(Dialog, null, null);
-            
-            //if (result.HasValue && result.Value)
-            //{
 
+            if (Dialog.isAdd)
+            {
 
-            //}
+                Analyse.analyse.AddRange(Dialog.am);
+                
+                BindAnalyse.AddRange(Dialog.am);
+                isChange = true;
+            }
+         
         }
 
 
-        public void Replace<AnalyseModel>(List<AnalyseModel> source, AnalyseModel oldValue, AnalyseModel newValue)
-        {
-            if (source == null)
-                throw new ArgumentNullException("source");
-
-            var index = source.IndexOf(oldValue);
-            if (index != -1)
-                source[index] = newValue;
-
-        }
-
+       
 
 
     }

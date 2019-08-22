@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using Gestion_Labo.EventModels;
+using Gestion_Labo.Helpers;
 using Gestion_Labo.lib.DataAccess.Interfaces;
 using Gestion_Labo.lib.Models;
 using System;
@@ -12,8 +13,6 @@ namespace Gestion_Labo.ViewModels
 {
     public class MaladesViewModel : Screen
     {
-
-
 
         public List<MaladesAnalyseModel> ListofMalades { get; set; }
 
@@ -74,24 +73,24 @@ namespace Gestion_Labo.ViewModels
         }
 
 
-
-        public async Task LoadAnalyse(MaladesAnalyseModel MAM)
+        //gerer les analyses button
+        public void LoadAnalyse(MaladesAnalyseModel MAM)
         {
 
 
             var Dialog = IoC.Get<AnalyseViewModel>();
             Dialog.Analyse = MAM;
-            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
-            //var result = _window.ShowDialog(u, null, null);
+           
             _window.ShowDialog(Dialog, null, null);
-
-            //verify if something is change before loadmalades again
-            await LoadMalades();
-            //if (result.HasValue && result.Value)
-            //{
-
-
-            //}
+           
+           
+            if (Dialog.isChange)
+            {
+                Replace.ReplaceItem(ListofMalades, MAM, Dialog.Analyse);
+                BindMalades.Refresh();
+            }
+           
+            
         }
 
 
@@ -110,12 +109,10 @@ namespace Gestion_Labo.ViewModels
             }
 
 
-           
-
         }
 
 
-        public async Task EditMalade(MaladesAnalyseModel MAM)
+        public void EditMalade(MaladesAnalyseModel MAM)
         {
             var Dialog = IoC.Get<EditMaladeViewModel>();
             Dialog.Malade = MAM;
@@ -123,17 +120,15 @@ namespace Gestion_Labo.ViewModels
             Dialog.Prenom = MAM.malade.Prenom;
             Dialog.Birthday = MAM.malade.Birthday;
 
-            //u.BindAnalyse = new BindableCollection<AnalyseModel>(MAM.analyse);
-            //var result = _window.ShowDialog(u, null, null);
             _window.ShowDialog(Dialog, null, null);
 
-            //verify if something is change before loadmalades again
-            await LoadMalades();
-            //if (result.HasValue && result.Value)
-            //{
+            if (Dialog.isEdit)
+            {
+                Replace.ReplaceItem(ListofMalades, MAM, Dialog.Malade);
+                BindMalades.Refresh();
+            }
 
-
-            //}
+            
         }
 
         public void AddMalade()

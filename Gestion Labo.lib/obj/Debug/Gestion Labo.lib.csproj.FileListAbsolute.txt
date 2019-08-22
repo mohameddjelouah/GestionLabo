@@ -16,12 +16,3 @@ F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CoreComp
 F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CopyComplete
 F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.dll
 F:\myapp\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.pdb
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\bin\Debug\Gestion Labo.lib.dll
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\bin\Debug\Gestion Labo.lib.pdb
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\bin\Debug\Dapper.dll
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\bin\Debug\Dapper.xml
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csprojAssemblyReference.cache
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CoreCompileInputs.cache
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.csproj.CopyComplete
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.dll
-D:\MyDev with Git\GestionLabo\Gestion Labo.lib\obj\Debug\Gestion Labo.lib.pdb

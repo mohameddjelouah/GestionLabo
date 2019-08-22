@@ -90,13 +90,23 @@ namespace Gestion_Labo.lib.DataAccess
 
         }
 
-        //add analyse to an existing user
+        //add analyse to a new existing user
         public async Task AddAnalyse(List<AnalyseModel> am)
         {
             SqlDataAccess sql = new SqlDataAccess();
             await sql.SaveData("dbo.spAddAnalyse", am, "GestionLaboDB");
         }
 
+        
+
+        //add analyse to an ecxisting user
+
+        public async Task<int> AddAnalyseGetId(AnalyseModel am)
+        {
+            SqlDataAccess sql = new SqlDataAccess();
+            int AnalyseID = await sql.SaveDataAndReturnID<int, dynamic>("dbo.spAddAnalyseGetId", am, "GestionLaboDB");
+            return AnalyseID;
+        }
 
         public async Task EditMalade(MaladeModel mm)
         {
