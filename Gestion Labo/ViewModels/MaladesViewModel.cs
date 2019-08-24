@@ -47,6 +47,45 @@ namespace Gestion_Labo.ViewModels
             }
         }
 
+        private bool _transition = false;
+
+        public bool Transition
+        {
+            get { return _transition; }
+            set
+            {
+                _transition = value;
+                NotifyOfPropertyChange(() => Transition);
+
+            }
+        }
+
+
+        private bool _prog = true;
+
+        public bool Prog
+        {
+            get { return _prog; }
+            set
+            {
+                _prog = value;
+                NotifyOfPropertyChange(() => Prog);
+
+            }
+        }
+
+        private bool _load = false;
+
+        public bool Load
+        {
+            get { return _load; }
+            set
+            {
+                _load = value;
+                NotifyOfPropertyChange(() => Load);
+
+            }
+        }
 
         private IMaladesData _maladesData;
         private IWindowManager _window;
@@ -62,7 +101,10 @@ namespace Gestion_Labo.ViewModels
         { // if loading incuident doesnt work we caatch an exception that stop progress bar and display a message with failure
             base.OnViewLoaded(view);
             await LoadMalades();
-           
+            
+            Prog = false;
+            
+            Load = true;
 
         }
 
@@ -80,10 +122,8 @@ namespace Gestion_Labo.ViewModels
 
             var Dialog = IoC.Get<AnalyseViewModel>();
             Dialog.Analyse = MAM;
-           
-            _window.ShowDialog(Dialog, null, null);
-           
-           
+            ShowDialog(Dialog);
+
             if (Dialog.isChange)
             {
                 Replace.ReplaceItem(ListofMalades, MAM, Dialog.Analyse);
@@ -96,19 +136,16 @@ namespace Gestion_Labo.ViewModels
 
         public async Task DeleteMalade(MaladesAnalyseModel MAM)
         {
-
             var Dialog = IoC.Get<ConfirmDialogViewModel>();
+            Transition = true;
             var result = _window.ShowDialog(Dialog, null, null);
-
-
+            Transition = false;
             if (result.HasValue && result.Value)
             {
                 await _maladesData.DeleteMaladeWithAnalyse(MAM.malade.Id);
                 ListofMalades.Remove(MAM);
                 BindMalades.Remove(MAM);
             }
-
-
         }
 
 
@@ -119,22 +156,25 @@ namespace Gestion_Labo.ViewModels
             Dialog.Nom = MAM.malade.Nom;
             Dialog.Prenom = MAM.malade.Prenom;
             Dialog.Birthday = MAM.malade.Birthday;
-
-            _window.ShowDialog(Dialog, null, null);
-
+            ShowDialog(Dialog);
             if (Dialog.isEdit)
             {
                 Replace.ReplaceItem(ListofMalades, MAM, Dialog.Malade);
                 BindMalades.Refresh();
-            }
-
-            
+            }   
         }
 
         public void AddMalade()
         {
             _events.PublishOnUIThread(new AddMaladeEvent());
           
+        }
+
+        public void ShowDialog<T>(T viewmodel)
+        {
+            Transition = true;
+            _window.ShowDialog(viewmodel, null, null);
+            Transition = false;
         }
 
     }

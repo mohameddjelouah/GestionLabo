@@ -80,3 +80,13 @@ F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.exe
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.pdb
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.g.cs
 F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\AddAnalyseView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\ConfirmDialogView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\EditAnalyseView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\EditMaladeView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\ErrorDialogView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\SuccessDialogView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\ConfirmDialogView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\EditAnalyseView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\EditMaladeView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\ErrorDialogView.baml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\SuccessDialogView.baml

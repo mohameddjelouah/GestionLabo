@@ -4,8 +4,43 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestion_Labo.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         xmlns:cal="http://www.caliburnproject.org"
+        xmlns:cm="http://www.caliburnproject.org"
         mc:Ignorable="d"
-        Title="ShellView" Height="720" Width="1280">
+        Title="ShellView" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" FontFamily="Century Gothic" Height="720" Width="1280">
+
+    <Window.Resources>
+
+
+        <ControlTemplate x:Key="NoScroll">
+            <ItemsPresenter></ItemsPresenter>
+        </ControlTemplate>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(ScrollViewer.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="230"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(ScrollViewer.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="230"/>
+            </DoubleAnimationUsingKeyFrames>
+
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ToggleButton.Checked" SourceName="menu">
+            <BeginStoryboard x:Name="CloseMenu_BeginStoryboard" Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ToggleButton.Unchecked" SourceName="menu">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    
     <Grid>
 
         <Grid.RowDefinitions>
@@ -13,21 +48,102 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-           
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-        <StackPanel Orientation="Horizontal">
-            <Button x:Name="Malade" Content="afficher malade" Width="auto" Height="50"></Button>
-           
-        </StackPanel>
 
+        <!--banner on the top with menu button and exit minimize and maximaze -->
+        <materialDesign:ColorZone cm:Message.Attach="[Event MouseDoubleClick] = [Action MinMax()]"   Background="#5c6bc0" Padding="5" materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Grid.Row="0" Grid.ColumnSpan="2" >
+            <Grid>
+                <!--exit minimize and maximaze -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="MinApplication" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
 
-        <Grid  Grid.Row="1"   >
+                        <materialDesign:PackIcon Kind="WindowMinimize"/>
+                    </Button>
+                    <!--<Button x:Name="MaxApplication" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
+                        <materialDesign:PackIcon Kind="WindowMaximize" />
+                    </Button>-->
+                    <ToggleButton   x:Name="MaxResApplication" IsChecked="{Binding ResizeApp}" Background="Transparent" BorderBrush="{x:Null}" Width="30" Height="30" Style="{StaticResource MaterialDesignActionAccentToggleButton}">
+
+                        <ToggleButton.Content>
+
+                            <materialDesign:PackIcon Kind="WindowMaximize" />
+                        </ToggleButton.Content>
+                        <materialDesign:ToggleButtonAssist.OnContent>
+                            <materialDesign:PackIcon Kind="WindowRestore"/>
+                        </materialDesign:ToggleButtonAssist.OnContent>
+                    </ToggleButton>
+
+                    <Button x:Name="ExitApplication" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
+                        <materialDesign:PackIcon Kind="WindowClose" />
+                    </Button>
+                </StackPanel>
+                <!--end of exit minimize and maximaze -->
+
+                <!--menu buton-->
+                <ToggleButton   Margin="5 0 0 0" Background="Transparent" x:Name="menu" Width="30" Height="30" Style="{StaticResource MaterialDesignActionToggleButton}" HorizontalAlignment="Left">
+
+                    <ToggleButton.Content>
+                        <materialDesign:PackIcon Kind="MenuOpen" Width="30" Height="30" />
+                    </ToggleButton.Content>
+                    <materialDesign:ToggleButtonAssist.OnContent>
+                        <materialDesign:PackIcon Kind="Menu" Width="30" Height="30"/>
+                    </materialDesign:ToggleButtonAssist.OnContent>
+                </ToggleButton>
+                <!--end of menu buton-->
+            </Grid>
+        </materialDesign:ColorZone>
+        <!--end of banner on the top with menu button and exit minimize and maximaze-->
+
+        <!--displaying user control-->
+        <Grid  Grid.Row="1"  Grid.Column="1" >
 
             <ContentControl x:Name="ActiveItem" />
 
         </Grid>
+        <!--end of displaying user control-->
+
+        <!--start menu-->
+        <materialDesign:ColorZone Width="230" materialDesign:ShadowAssist.ShadowDepth="Depth2" materialDesign:ShadowAssist.ShadowEdges="Bottom,Right" VerticalAlignment="Stretch" x:Name="GridMenu" Grid.Row="1" Grid.Column="0"   Background="#5c6bc0" Padding="5" RenderTransformOrigin="0.5,0.5"  Mode="PrimaryMid"  >
+
+            
+            <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" >
+
+                <StackPanel>
+                    <Grid Margin="10 -2 10 0">
+                        <Separator Height="15"  Background="#ffebee" Style="{StaticResource MaterialDesignLightSeparator}"  ></Separator>
+                    </Grid>
+
+                    <Grid  >
+                        <materialDesign:PackIcon Kind="ViewDashboard" Width="15" Height="15" Margin="10 16" Foreground="White"/>
+                        <ListBoxItem VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"  Padding="37 14" FontSize="15" Foreground="White">
+
+                            <TextBlock Cursor="Hand" cm:Message.Attach="[Event MouseLeftButtonDown] = [Action Dashboard()]" Text="Dashboard"/>
+                        </ListBoxItem>
+
+                    </Grid>
+
+
+                    <Grid >
+                        <materialDesign:PackIcon Kind="Walker" Width="15" Height="15" Margin="10 16" Foreground="White"/>
+                        <ListBoxItem   Content="Gere les Malades" Padding="37 14" FontSize="15" Foreground="White"/>
+                        <Expander  IsExpanded="False" Width="210" HorizontalAlignment="Right" Background="{x:Null}" Foreground="White">
+                            <ListView Template="{StaticResource NoScroll}"  Foreground="White" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                                <TextBlock Cursor="Hand" cm:Message.Attach="[Event MouseLeftButtonDown] = [Action Malade()]" Text="Liste des Malades" Padding="20 5"/>
+                                
+                            </ListView>
+                        </Expander>
+                    </Grid>
+
+                </StackPanel>
+            </ScrollViewer>
+           
+
+        </materialDesign:ColorZone>
+        <!--end of menu-->
 
     </Grid>
+    
 </Window>

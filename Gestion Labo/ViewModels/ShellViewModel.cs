@@ -15,6 +15,20 @@ namespace Gestion_Labo.ViewModels
     {
         private IMaladesData _maladesData;
         private IEventAggregator _events;
+
+        private bool _resizeApp;
+
+        public bool ResizeApp
+        {
+            get { return _resizeApp; }
+            set
+            {
+
+                _resizeApp = value;
+                NotifyOfPropertyChange(() => ResizeApp);
+
+            }
+        }
         public ShellViewModel(IMaladesData maladesdata, IEventAggregator events)
         {
             _events = events;
@@ -33,6 +47,45 @@ namespace Gestion_Labo.ViewModels
         public void Handle(AddMaladeEvent message)
         {
             ActivateItem(IoC.Get<AddMaladeViewModel>());
+        }
+
+
+
+        public void ExitApplication()
+        {
+            TryClose();
+
+        }
+
+        public void MinApplication()
+        {
+            App.Current.MainWindow.WindowState = System.Windows.WindowState.Minimized;
+        }
+        public void MaxResApplication()
+        {
+            if (ResizeApp == true)
+            {
+                App.Current.MainWindow.WindowState = System.Windows.WindowState.Maximized;
+            }
+            else
+            {
+                App.Current.MainWindow.WindowState = System.Windows.WindowState.Normal;
+            }
+
+        }
+        public void MinMax()
+        {
+            if (App.Current.MainWindow.WindowState == System.Windows.WindowState.Normal)
+            {
+                App.Current.MainWindow.WindowState = System.Windows.WindowState.Maximized;
+                ResizeApp = true;
+            }
+            else
+            {
+                App.Current.MainWindow.WindowState = System.Windows.WindowState.Normal;
+                ResizeApp = false;
+
+            }
         }
     }
 

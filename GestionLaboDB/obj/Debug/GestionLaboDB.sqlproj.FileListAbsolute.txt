@@ -16,3 +16,4 @@ F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\postdeploy.sql
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\predeploy.sql
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.dll
 F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.pdb
+F:\myapp\GestionLabo\GestionLaboDB\obj\Debug\GestionLaboDB.sqlprojAssemblyReference.cache

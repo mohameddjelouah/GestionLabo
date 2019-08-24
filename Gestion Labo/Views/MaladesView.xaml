@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:cal="http://www.caliburnproject.org"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="1280" Background="Gray">
+             d:DesignHeight="450" FontSize="15" FontFamily="Century Gothic" d:DesignWidth="1280" Background="#222f3e">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -15,17 +15,33 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DockPanel  Grid.Row="0">
-            <TextBox DockPanel.Dock="Left" Margin="10 0 0 0"  x:Name="search" Width="300"/>
+        <ProgressBar Grid.RowSpan="2" Width="200" Height="200" Visibility="{Binding Path=Prog,Converter={StaticResource booleanToVisibiltyConverter}}"  VerticalAlignment="Center" Style="{StaticResource MaterialDesignCircularProgressBar}" Value="0" IsIndeterminate="True" />
+        <Border Visibility="{Binding Path=Transition,Converter={StaticResource booleanToVisibiltyConverter}}" Grid.RowSpan="2" Panel.ZIndex="10" Opacity="0.5">
+            <Border Background="Black"/>
+        </Border>
+
+        <DockPanel Visibility="{Binding Path=Load,Converter={StaticResource booleanToVisibiltyConverter}}" Grid.Row="0">
+
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Width="40" Height="40" Margin="10 10 5 10" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Kind="PersonSearch" Foreground="{Binding ElementName=search, Path=Foreground}" />
+                <TextBox  Style="{StaticResource MaterialDesignFilledTextFieldTextBox}" materialDesign:TextFieldAssist.UnderlineBrush="White"    Foreground="White" DockPanel.Dock="Left"  Margin="10 10 10 10"  x:Name="search" Width="300" materialDesign:HintAssist.Foreground="White"  materialDesign:HintAssist.Hint="Chercher un Malade......"/>
+            </StackPanel>
+            
+            
             <Button x:Name="AddMalade" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="0 0 10 0" Background="Transparent" BorderBrush="Transparent"  Style="{StaticResource MaterialDesignFloatingActionButton}">
                 <materialDesign:PackIcon Kind="AddCircle" Height="auto" Width="auto" />
             </Button>
         </DockPanel>
-        
 
-        <DataGrid Grid.Row="1" x:Name="BindMalades" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
 
-            <DataGrid.Columns>
+        <DataGrid Background="#222f3e" Foreground="White"  Visibility="{Binding Path=Load,Converter={StaticResource booleanToVisibiltyConverter}}" Grid.Row="1" x:Name="BindMalades" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="White" />
+                </Style>
+                
+            </DataGrid.Resources>
+            <DataGrid.Columns >
                 <DataGridTextColumn Header="Nom" Binding="{Binding Path=malade.Nom}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Prénom" Binding="{Binding Path=malade.Prenom}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Date de naissance" Binding="{Binding Path=malade.Birthday}"></DataGridTextColumn>
@@ -34,7 +50,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="LoadAnalyse(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
-                                <materialDesign:PackIcon Kind="FileDocumentBoxMultipleOutline" Foreground="Gray" Width="auto" Height="auto"  />
+                                <materialDesign:PackIcon Kind="FileDocumentBoxMultipleOutline" Foreground="LightGray" Width="auto" Height="auto"  />
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -44,7 +60,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="EditMalade(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
-                                <materialDesign:PackIcon Kind="TableEdit" Foreground="Gray" Width="auto" Height="auto"  />
+                                <materialDesign:PackIcon Kind="TableEdit" Foreground="LightGray" Width="auto" Height="auto"  />
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
@@ -55,7 +71,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="DeleteMalade(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
-                                <materialDesign:PackIcon Kind="DeleteForever" Foreground="OrangeRed" Width="auto" Height="auto"  />
+                                <materialDesign:PackIcon Kind="DeleteForever" Foreground="#ff9f43" Width="auto" Height="auto"  />
                             </Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

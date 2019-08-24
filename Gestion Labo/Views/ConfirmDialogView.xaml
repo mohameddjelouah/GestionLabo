@@ -6,23 +6,23 @@
         xmlns:local="clr-namespace:Gestion_Labo.Views"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="ConfirmDialogView" Background="{x:Null}" Height="150" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
+        Title="ConfirmDialogView" FontFamily="Century Gothic" Background="{x:Null}" Height="150" Width="300" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True">
 
-    <materialDesign:ColorZone Background="WhiteSmoke"  VerticalAlignment="Stretch" CornerRadius="10" BorderBrush="{DynamicResource MaterialDesignDivider}">
+    <materialDesign:ColorZone  Background="#222f3e"  VerticalAlignment="Stretch" CornerRadius="9" >
     
         <StackPanel>
 
             <DockPanel>
-                <Button HorizontalAlignment="Right" x:Name="CloseDialog" Background="{x:Null}" BorderBrush="{x:Null}" Width="25" Height="25" Padding="0">
-                     <materialDesign:PackIcon Width="25" Height="25" Foreground="LightGray"  Kind="WindowClose"/>
+                <Button HorizontalAlignment="Right" x:Name="CloseDialog" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
+                     <materialDesign:PackIcon Width="30" Height="30" Foreground="White"  Kind="WindowClose"/>
                 </Button>
              </DockPanel>
 
-            <TextBlock Margin="0 15 0 15" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Vous Etes Sur ?"/>
+            <TextBlock Foreground="White" Margin="0 15 0 15" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Vous Etes Sur ?"/>
 
             <DockPanel Margin="30 20 30 0">
-                <Button Width="100" x:Name="ok" Content="Supprimer" HorizontalAlignment="Left" />
-                <Button Width="100" x:Name="Cancel" HorizontalAlignment="Right" Content="Anuller" />
+                <Button Width="100" x:Name="ok" Background="#8395a7" BorderBrush="{x:Null}" Content="Supprimer" HorizontalAlignment="Left" />
+                <Button Width="100" x:Name="Cancel" Background="#8395a7" BorderBrush="{x:Null}" HorizontalAlignment="Right" Content="Anuller" />
             </DockPanel>
         </StackPanel>
     
