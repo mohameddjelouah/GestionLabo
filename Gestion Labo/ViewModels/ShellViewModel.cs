@@ -37,9 +37,9 @@ namespace Gestion_Labo.ViewModels
            
         }
 
-        public async void Malade()
+        public void Malade()
         {
-          var output =  await _maladesData.GetAllMalades();
+            //var output =  await _maladesData.GetAllMalades();
             ActivateItem(IoC.Get<MaladesViewModel>());
         }
 

@@ -42,11 +42,11 @@
                 
             </DataGrid.Resources>
             <DataGrid.Columns >
-                <DataGridTextColumn Header="Nom" Binding="{Binding Path=malade.Nom}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Prénom" Binding="{Binding Path=malade.Prenom}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Date de naissance" Binding="{Binding Path=malade.Birthday}"></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Nom" Binding="{Binding Path=malade.Nom}"></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Prénom" Binding="{Binding Path=malade.Prenom}"></DataGridTextColumn>
+                <DataGridTextColumn Width="*" Header="Date de naissance" Binding="{Binding Path=malade.Birthday}"></DataGridTextColumn>
 
-                <DataGridTemplateColumn  Header="Gere les Analyse">
+                <DataGridTemplateColumn Width="auto" Header="Gere les Analyse">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="LoadAnalyse(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
@@ -56,7 +56,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn  Header="Modifier le Malade">
+                <DataGridTemplateColumn Width="auto" Header="Modifier le Malade">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="EditMalade(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
@@ -67,7 +67,7 @@
                 </DataGridTemplateColumn>
 
 
-                <DataGridTemplateColumn  Header="Supprimer le Malade">
+                <DataGridTemplateColumn Width="auto" Header="Supprimer le Malade">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button cal:Message.Attach="DeleteMalade(BindMalades.SelectedItem)" Background="{x:Null}" BorderBrush="{x:Null}" Width="auto" Height="auto">
