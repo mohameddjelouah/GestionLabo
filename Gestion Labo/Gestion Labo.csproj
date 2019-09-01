@@ -44,6 +44,12 @@
     <Reference Include="Caliburn.Micro.Platform.Core, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
       <HintPath>..\packages\Caliburn.Micro.3.2.0\lib\net45\Caliburn.Micro.Platform.Core.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -84,6 +90,7 @@
     <Compile Include="ViewModels\AddMaladeViewModel.cs" />
     <Compile Include="ViewModels\AnalyseViewModel.cs" />
     <Compile Include="ViewModels\ConfirmDialogViewModel.cs" />
+    <Compile Include="ViewModels\DashBoardViewModel.cs" />
     <Compile Include="ViewModels\EditAnalyseViewModel.cs" />
     <Compile Include="ViewModels\EditMaladeViewModel.cs" />
     <Compile Include="ViewModels\ErrorDialogViewModel.cs" />
@@ -101,6 +108,9 @@
     </Compile>
     <Compile Include="Views\ConfirmDialogView.xaml.cs">
       <DependentUpon>ConfirmDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DashBoardView.xaml.cs">
+      <DependentUpon>DashBoardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EditAnalyseView.xaml.cs">
       <DependentUpon>EditAnalyseView.xaml</DependentUpon>
@@ -163,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ConfirmDialogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DashBoardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

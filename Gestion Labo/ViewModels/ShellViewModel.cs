@@ -37,6 +37,12 @@ namespace Gestion_Labo.ViewModels
            
         }
 
+        public void Dashboard()
+        {
+            
+                ActivateItem(IoC.Get<DashBoardViewModel>());
+        }
+
         public void Malade()
         {
             //var output =  await _maladesData.GetAllMalades();

@@ -51,6 +51,7 @@
     <Compile Include="Models\AnalyseModel.cs" />
     <Compile Include="Models\MaladeModel.cs" />
     <Compile Include="Models\MaladesAnalyseModel.cs" />
+    <Compile Include="Models\MaladesStat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

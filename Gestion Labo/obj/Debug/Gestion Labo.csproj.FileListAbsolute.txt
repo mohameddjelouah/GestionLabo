@@ -142,3 +142,11 @@ D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CoreCom
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.csproj.CopyComplete
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.exe
 D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Gestion Labo.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\DashBoardView.g.cs
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\Views\DashBoardView.baml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.dll
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.xml
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.pdb
+D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.xml

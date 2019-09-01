@@ -119,5 +119,7 @@ namespace Gestion_Labo.lib.DataAccess
             SqlDataAccess sql = new SqlDataAccess();
             await sql.UpdateData("dbo.spEditAnalyse", am, "GestionLaboDB");
         }
+
+        
     }
 }
