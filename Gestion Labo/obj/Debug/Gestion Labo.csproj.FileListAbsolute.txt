@@ -150,3 +150,11 @@ D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.pdb
 D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.xml
 D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.pdb
 D:\MyDev with Git\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.xml
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.dll
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.dll
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.pdb
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.xml
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.pdb
+F:\myapp\GestionLabo\Gestion Labo\bin\Debug\LiveCharts.Wpf.xml
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\DashBoardView.g.cs
+F:\myapp\GestionLabo\Gestion Labo\obj\Debug\Views\DashBoardView.baml

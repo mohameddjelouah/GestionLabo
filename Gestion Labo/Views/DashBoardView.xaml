@@ -9,8 +9,8 @@
              d:DesignHeight="450" FontFamily="Century Gothic" Background="#222f3e" d:DesignWidth="800">
     <Grid>
 
-        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Right" >
-            <lvc:CartesianChart.AxisY>
+        <lvc:CartesianChart Margin="50" Series="{Binding SeriesCollection}"  >
+        <lvc:CartesianChart.AxisY>
                 <lvc:Axis Title="Malades" LabelFormatter="{Binding YFormatter}"></lvc:Axis>
             </lvc:CartesianChart.AxisY>
             <lvc:CartesianChart.AxisX>

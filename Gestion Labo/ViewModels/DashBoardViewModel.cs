@@ -14,7 +14,20 @@ namespace Gestion_Labo.ViewModels
 {
     public class DashBoardViewModel : Screen
     {
-        public List<MaladesAnalyseModel> ListofMalades { get; set; }
+        private List<MaladesAnalyseModel> _listofMalades = new List<MaladesAnalyseModel>();
+
+        public List<MaladesAnalyseModel> ListofMalades
+        {
+            get { return  _listofMalades; }
+            set {
+
+                _listofMalades = value;
+                NotifyOfPropertyChange(() => ListofMalades);
+
+            }
+        }
+
+        
         public List<MaladesStat> MaladesStat { get; set; }
         public SeriesCollection SeriesCollection { get; set; }
         public string[] Labels { get; set; }
@@ -35,6 +48,7 @@ namespace Gestion_Labo.ViewModels
                    
                     Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
                 },
+                 
                 
             };
 
@@ -60,23 +74,25 @@ namespace Gestion_Labo.ViewModels
         }
 
 
-        //protected override async void OnViewLoaded(object view)
-        //{ // if loading incuident doesnt work we caatch an exception that stop progress bar and display a message with failure
-        //    base.OnViewLoaded(view);
-        //    await LoadMalades();
+        protected override async void OnViewLoaded(object view)
+        { // if loading incuident doesnt work we caatch an exception that stop progress bar and display a message with failure
+            base.OnViewLoaded(view);
+            await LoadMalades();
 
-        //    var stat = from malade in ListofMalades where malade.malade.Birthday == DateTime.Now.Year 
-           
-
-        //}
-
-        //// string qu = "SELECT Year(date), Month(date), Count(*) FROM incident WHERE is_cloture = '1' and date >= CURDATE() - INTERVAL 1 YEAR GROUP BY Year(date), Month(date)";
-        //public async Task LoadMalades()
-        //{
-
-        //    ListofMalades = await _maladesData.GetAllMalades();
+           // var stat = from malade in ListofMalades
+                    //   where malade.malade.Birthday == DateTime.Now.Year
 
 
-        //}
+
+        }
+
+        // string qu = "SELECT Year(date), Month(date), Count(*) FROM incident WHERE is_cloture = '1' and date >= CURDATE() - INTERVAL 1 YEAR GROUP BY Year(date), Month(date)";
+        public async Task LoadMalades()
+        {
+
+            ListofMalades = await _maladesData.GetAllMalades();
+
+
+        }
     }
 }
