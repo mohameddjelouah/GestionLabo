@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-F:\myapp\GestionLabo\Gestion Labo\obj\Debug\
+D:\MyDev with Git\GestionLabo\Gestion Labo\obj\Debug\
 Gestion_Labo
 none
 false
 DEBUG;TRACE
-F:\myapp\GestionLabo\Gestion Labo\App.xaml
+D:\MyDev with Git\GestionLabo\Gestion Labo\App.xaml
 11-448455179
 
-31-32710065
-126-444479375
+31-1490914167
+1261566587196
 Views\AddAnalyseView.xaml;Views\AddMaladeView.xaml;Views\AnalyseView.xaml;Views\ConfirmDialogView.xaml;Views\DashBoardView.xaml;Views\EditAnalyseView.xaml;Views\EditMaladeView.xaml;Views\ErrorDialogView.xaml;Views\MaladesView.xaml;Views\ShellView.xaml;Views\SuccessDialogView.xaml;
 
 True

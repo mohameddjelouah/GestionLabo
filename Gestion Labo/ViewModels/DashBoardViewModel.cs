@@ -92,7 +92,41 @@ namespace Gestion_Labo.ViewModels
 
             ListofMalades = await _maladesData.GetAllMalades();
 
+            
+            var now = DateTime.Now;
+            now = now.Date.AddDays(1 - now.Day);
+            var months = Enumerable.Range(-12, 13)
+            .Select(x => new
+            {
+                year = now.AddMonths(x).Year,
+                month = now.AddMonths(x).Month
+            });
+            //var grouped = from p in ListofMalades
+            //              where p.malade.Birthday.Value >= DateTime.Now.AddYears(-1)
+            //              group p by new { day = p.malade.Birthday.Value.Day, month = p.malade.Birthday.Value.Month, year = p.malade.Birthday.Value.Year } into d
+            //              select new { dt = DateTime.Parse(string.Format("{0}/{1}/{2}", d.Key.day, d.Key.month, d.Key.year)), count = d.Count() };
 
+
+
+            var grouped = from p in ListofMalades
+                          where p.malade.Birthday.Value >= DateTime.Now.AddYears(-1)
+                          group p by new {  month = p.malade.Birthday.Value.Month, year = p.malade.Birthday.Value.Year } into d
+                          select new {m = d.Key.month,y = d.Key.year  , count = d.Count() };
+
+            var changesPerYearAndMonth =
+               (months.GroupJoin(grouped,
+               m => new { month = m.month, year = m.year },
+               revision => new {
+                   month = revision.m,
+                   year = revision.y
+               },
+               (p, g) => new {
+                   month = p.month,
+                   year = p.year,
+                   count = g.Sum(a => a.count)
+               })).ToList();
+
+            
         }
     }
 }
