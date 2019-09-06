@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,7 @@ namespace Gestion_Labo.ViewModels
         
         public List<MaladesStat> MaladesStat { get; set; }
         public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
+        public List<string> Labels { get; set; }
         private IMaladesData _maladesData;
         //public Func<double, string> YFormatter { get; set; } // use that to format nuber to month or currency or something else
         public DashBoardViewModel(IMaladesData maladesdata)
@@ -38,22 +39,10 @@ namespace Gestion_Labo.ViewModels
 
             _maladesData = maladesdata;
 
+
+
             
 
-            SeriesCollection = new SeriesCollection
-            {
-                
-                new LineSeries
-                {
-                   
-                    Values = new ChartValues<double> { 4, 6, 5, 2 ,4 }
-                },
-                 
-                
-            };
-
-
-            Labels = new[] { "Jan", "Feb", "Mar", "Apr", "May" };
             //YFormatter = value => value.ToString("C");
 
             //SeriesCollection.Add(new LineSeries
@@ -108,25 +97,52 @@ namespace Gestion_Labo.ViewModels
 
 
 
-            var grouped = from p in ListofMalades
+            List<MaladesStat> grouped = (from p in ListofMalades
                           where p.malade.Birthday.Value >= DateTime.Now.AddYears(-1)
                           group p by new {  month = p.malade.Birthday.Value.Month, year = p.malade.Birthday.Value.Year } into d
-                          select new {m = d.Key.month,y = d.Key.year  , count = d.Count() };
+                          select new MaladesStat { Month = d.Key.month,Year = d.Key.year  , Count = d.Count() }).ToList();
 
             var changesPerYearAndMonth =
                (months.GroupJoin(grouped,
                m => new { month = m.month, year = m.year },
                revision => new {
-                   month = revision.m,
-                   year = revision.y
+                   month = revision.Month,
+                   year = revision.Year
                },
                (p, g) => new {
                    month = p.month,
                    year = p.year,
-                   count = g.Sum(a => a.count)
+                   count = g.Sum(a => a.Count)
                })).ToList();
 
+
+            List<int> count = changesPerYearAndMonth.Select(p => p.count).ToList();
+            Labels = new List<string>();
+            foreach (var item in changesPerYearAndMonth)
+            {
+                Labels.Add(string.Format("{0}/{1}", CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(item.month), item.year) ) ;  
+            }
             
+
+            SeriesCollection = new SeriesCollection
+            {
+
+                new LineSeries
+                {
+
+                    Values = new ChartValues<int> (count)
+                },
+
+
+            };
+
+           
+
+          
+
+            NotifyOfPropertyChange(() => SeriesCollection);
+            NotifyOfPropertyChange(() => Labels);
+
         }
     }
 }
